@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +19,19 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">About</a></li>
+                    <li><a href="contact.php" class="active">Contact</a></li>
+                    <?php if(isset($_SESSION['user_id'])): ?>
+                        <li><a href="php/dashboard.php">Dashboard</a></li>
+                        <li><a href="php/logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <?php else: ?>
+                        <li><a href="php/login.php">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <!-- Contact Hero Section -->
         <section class="contact-hero">
@@ -54,11 +63,11 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <h4>Email</h4>
-                        <p>nelsonfootballagent.sl</p>
+                        <p><a href="mailto:nelson@footballagent.sl">nelson@footballagent.sl</a></p> 
                     </div>
                     <div class="contact-item">
                         <h4>Phone</h4>
-                        <p>+232 79 826-564</p>
+                        <p><a href="tel:+23279826564">+232 79 826-564</a></p>  
                     </div>
                     <div class="contact-item">
                         <h4>Address</h4>

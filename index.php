@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +19,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="services.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <?php if(isset($_SESSION['user_id'])): ?>
+                        <li><a href="php/dashboard.php">Dashboard</a></li>
+                        <li><a href="php/logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <?php else: ?>
+                        <li><a href="php/login.php">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
@@ -33,7 +43,7 @@
             <div class="hero-content">
                 <h2 class="hero-title">Leading Football Agency in Sierra Leone</h2>
                 <p class="hero-subtitle">Connecting talented players with opportunities worldwide</p>
-                <a href="contact.html" class="cta-button">
+                <a href="contact.php" class="cta-button">  <!-- Fixed: changed contact.html to contact.php -->
                     <span>Get Started</span>
                     <div class="button-shine"></div>
                 </a>
@@ -109,7 +119,7 @@
                 <div class="contact-info">
                     <h4>Contact Information</h4>
                     <p><a href="mailto:nelson@footballagent.sl">📧nelson@footballagent.sl</a></p>
-                    <p> <a href="tel:+23279826564">📞 +232 79 826-564</a></p>
+                    <p><a href="tel:+23279826564">📞 +232 79 826-564</a></p>
                     <p><a href="https://www.google.com/maps/search/?api=1&query=Goderich+Street+Freetown+Sierra+Leone" target="_blank" rel="noopener">
                         📍15 Goderich Street,<br>Freetown, Sierra Leone</a>
                     </p>

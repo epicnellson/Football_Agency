@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +19,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php" class="active">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <?php if(isset($_SESSION['user_id'])): ?>
+                        <li><a href="php/dashboard.php">Dashboard</a></li>
+                        <li><a href="php/logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <?php else: ?>
+                        <li><a href="php/login.php">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
