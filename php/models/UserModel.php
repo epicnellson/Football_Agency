@@ -8,8 +8,8 @@ class UserModel {
         $this->conn = $db;
     }
 
-    // CREATE - Add new user
-    public function create($username, $email, $password, $role, $first_name, $last_name, $phone, $address) {
+    // CREATE - Add new user (FIXED to return user ID)
+    public function create($username, $email, $password, $role, $first_name, $last_name, $phone, $address, $date_of_birth = null) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         
         $query = "INSERT INTO " . $this->table_name . " 
@@ -19,7 +19,12 @@ class UserModel {
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("ssssssss", $username, $email, $hashedPassword, $role, $first_name, $last_name, $phone, $address);
         
-        return $stmt->execute();
+        if ($stmt->execute()) {
+            // Return the inserted user's ID instead of just true
+            return $this->conn->insert_id;
+        }
+        
+        return false;
     }
 
     // READ - Get all users

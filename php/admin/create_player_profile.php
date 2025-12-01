@@ -91,12 +91,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <nav>
                 <ul>
                     <li><a href="../../index.php">Home</a></li>
-                    <li><a href="dashboard.php">Admin Dashboard</a></li>
-                    <li><a href="players.php">Player Management</a></li>
+                    <li><a href="dashboard.php">Admin</a></li>
+                    <li><a href="players.php">Player</a></li>
                     <li><a href="users.php">Users</a></li>
-                    <li><a href="create_player_profile.php" class="active">Add Player Profile</a></li>
-                    <li><a href="../dashboard.php">User Dashboard</a></li>
-                    <li><a href="../logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <li><a href="create_player_profile.php" class="active">Add</a></li>
+                    <!-- <li><a href="../dashboard.php">U</a></li> -->
+                    <li><a href="../logout.php">Logout </a></li>
                 </ul>
             </nav>
         </div>

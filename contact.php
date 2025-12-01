@@ -24,7 +24,7 @@ session_start();
                     <li><a href="contact.php" class="active">Contact</a></li>
                     <?php if(isset($_SESSION['user_id'])): ?>
                         <li><a href="php/dashboard.php">Dashboard</a></li>
-                        <li><a href="php/logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                        <li><a href="php/logout.php">Logout </a></li>
                     <?php else: ?>
                         <li><a href="php/login.php">Login</a></li>
                     <?php endif; ?>

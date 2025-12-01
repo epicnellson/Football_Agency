@@ -139,11 +139,11 @@ $users = $userModel->readAll();
             <nav>
                 <ul>
                     <li><a href="../../index.php">Home</a></li>
-                    <li><a href="dashboard.php">Admin Dashboard</a></li>
+                    <li><a href="dashboard.php">Admin</a></li>
                     <li><a href="users.php" class="active">Users</a></li>
-                    <li><a href="create_user.php">Add </a></li>
-                    <li><a href="../dashboard.php">User Dashboard</a></li>
-                    <li><a href="../logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <!-- <li><a href="create_user.php">Add </a></li> -->
+                    <!-- <li><a href="../dashboard.php">U/Dashboard</a></li> -->
+                    <li><a href="../logout.php">Logout </a></li>
                 </ul>
             </nav>
         </div>

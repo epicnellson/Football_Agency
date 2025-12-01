@@ -173,11 +173,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <nav>
                 <ul>
                     <li><a href="../../index.php">Home</a></li>
-                    <li><a href="dashboard.php">Admin Dashboard</a></li>
+                    <li><a href="dashboard.php">Admin</a></li>
                     <li><a href="users.php">Users</a></li>
                     <li><a href="create_user.php">Add</a></li>
-                    <li><a href="../dashboard.php">User Dashboard</a></li>
-                    <li><a href="../logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <!-- <li><a href="../dashboard.php">User Dashboard</a></li> -->
+                    <li><a href="../logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>

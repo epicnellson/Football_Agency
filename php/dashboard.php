@@ -90,7 +90,7 @@ $currentUser = $userModel->readOne($_SESSION['user_id']);
                     <li><a href="../contact.php">Contact</a></li>
                     <li><a href="dashboard.php" class="active">Dashboard</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                    <li><a href="logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <li><a href="logout.php">Logout </a></li>
                 </ul>
             </nav>
         </div>

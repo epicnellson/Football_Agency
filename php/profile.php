@@ -110,7 +110,7 @@ if ($_SESSION['user_role'] == 'player') {
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="dashboard.php">Dashboard</a></li>
                     <li><a href="profile.php" class="active">Profile</a></li>
-                    <li><a href="logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
